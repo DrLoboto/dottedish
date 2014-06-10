@@ -1,5 +1,5 @@
 from dottedish import api
-from UserDict import UserDict
+from collections import UserDict
 
 @api.setitem.when_type(dict)
 def setitem_dict(o, key, value):
@@ -34,14 +34,14 @@ class DottedDict(object):
         return list(self.iterkeys())
 
     def iterkeys(self):
-        return (str(key) for key in self._o.iterkeys())
+        return (str(key) for key in self._o.keys())
 
     def items(self):
         return list(self.iteritems())
 
     def iteritems(self):
         return ((str(key), api.wrap(value))
-                for (key, value) in self._o.iteritems())
+                for (key, value) in self._o.items())
 
     def __eq__(self,other):
         if isinstance(other, DottedDict):

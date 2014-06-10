@@ -43,7 +43,7 @@ class DottedList(object):
         return list(self.iterkeys())
 
     def iterkeys(self):
-        return (str(i) for i in xrange(len(self._o)))
+        return (str(i) for i in range(len(self._o)))
 
     def items(self):
         return list(self.iteritems())
