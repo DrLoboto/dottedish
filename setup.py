@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.6'
+version = '0.6.1'
 
 setup(name='dottedish',
       version=version,
@@ -14,7 +14,7 @@ setup(name='dottedish',
           "License :: OSI Approved :: BSD License",
           "Operating System :: OS Independent",
           "Programming Language :: Python :: 2",
-      ], 
+      ],
       keywords='dictionary dict dotted deep',
       author='Tim Parkin, Matt Goodall',
       author_email='developers@ish.io',
